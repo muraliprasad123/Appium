@@ -63,16 +63,9 @@ class Byjusapptest(unittest.TestCase):
         scr2.onboard2_txt_valid()
         scr2.onboard2_next_btn_click()
 
-
-
-
-
-
-
-
-
     @classmethod
     def tearDownClass(cls):
         sleep(10)
         cls.driver.quit()
-        subprocess.Popen('killall node', shell=False)
+        #subprocess.Popen('killall node.exe', shell=False)
+        subprocess.Popen('Taskkill /IM node.exe /F', shell=True)
